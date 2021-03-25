@@ -1,11 +1,13 @@
-.App {
-  text-align: center;
-  background-color: rgb(24, 63, 50);
+nav {
+  width: 100vw;
 }
 h1 {
-  font-size: 50;
-  color:white;
+  text-align: center;
+  font-size: 90;
+  color:rgb(17, 2, 2);
 }
+
+
 nav a{
   text-decoration:none;
   color:inherit;
