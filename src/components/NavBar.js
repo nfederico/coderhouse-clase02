@@ -1,6 +1,7 @@
 
 const NavBar = () => 
-{return (
+{
+return (
     <nav>
         <ul>
         <li><a href="#">Inicio</a></li>              
