@@ -1,6 +1,10 @@
 .mainApp {
   text-align: center;
 }
+nav img { 
+  margin-right: 10px;
+}
+
 h1 {
   text-align: center;
   font-size: 70px;
@@ -14,13 +18,18 @@ nav ul {
 nav a{
   text-decoration:none;
   color:inherit;
-  font-size:20px;
+  font-size:30px;
   }
 
+nav li:first-child{
+  text-align:left;
+}
+
 nav li{
+  align-content: center;
   list-style-type: none;
   width: 100vw;
-  height:30px;
+  height:60px;
   padding:5px 10px;
   background-color:#000;
   border:1px solid #000;
@@ -34,14 +43,3 @@ nav li:hover{
   color:#000;
   }
 
-
-nav li>ul{
-  display:none;
-  }
-
-nav li:hover>ul{
-  display:block;
-  position:absolute;
-  top:30px;
-  left:0px;
-}
