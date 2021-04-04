@@ -18,7 +18,7 @@ nav ul {
 nav a{
   text-decoration:none;
   color:inherit;
-  font-size:30px;
+  font-size:20px;
   }
 
 nav li:first-child{
@@ -29,7 +29,7 @@ nav li{
   align-content: center;
   list-style-type: none;
   width: 100vw;
-  height:60px;
+  height:30px;
   padding:5px 10px;
   background-color:#000;
   border:1px solid #000;

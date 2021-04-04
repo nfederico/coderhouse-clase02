@@ -1,15 +1,20 @@
-
 import './App.css';
-import NavBar from  './components/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from  './components/Navbar/NavBar';
 
 function App() {
   const curso ='Coder House'
   return (
     <div className="mainApp">     
-          <h1>Americana Design </h1>          
+                
           <NavBar/>
+          <ItemListContainer greeting= "I am the prop of the ItemListContainer component"/>
 
     </div>
+
+ 
+  
+
   );
 }
 
