@@ -10,7 +10,7 @@ const itemsMocked = [
         id:2,
         title:"cuaderno 2",
         price: 20,
-        pictureUrl: "https://picsum.photos/200"
+        pictureUrl: "https://picsum.photos/100"
     },
 
 ]

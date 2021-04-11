@@ -1,0 +1,17 @@
+.itemlist-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+
+}
+
+li{
+  list-style: none;
+  
+}
+
+.ul-columnas{
+  
+}
