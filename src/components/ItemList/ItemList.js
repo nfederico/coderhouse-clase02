@@ -5,7 +5,7 @@ import './Styles.css';
 
 
 const ItemList = () =>{
-    const [Data, setData] = useState([]);
+    const [data, setData] = useState([]);
     setTimeout(() => {setData(itemsMocked)},2000); 
     
     return (
@@ -13,7 +13,7 @@ const ItemList = () =>{
         <div className="itemlist-container">
             <ul className="ul-columnas">
             {
-            Data.map((item)=>(
+            data.map((item)=>(
                     <li key= {item.id}> 
                         <Item title = {item.title} price = {item.price} pictureUrl={item.pictureUrl}/> 
                     </li>))
