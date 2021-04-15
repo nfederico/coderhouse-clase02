@@ -4,13 +4,14 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import './ItemDetail.css';
 
 function ItemDetail({item}) {
    const {title,pictureUrl,description,price} = item;
     
     return (
         <div>
-            <div className="Item">
+            <div className="container">
         <Card >
         <CardActionArea>
             <CardMedia
@@ -21,7 +22,7 @@ function ItemDetail({item}) {
                 title={title}
             />
         <CardContent>
-         <p>
+        <p>
          <Typography color="primary" gutterBottom align= "center">
            {title}
           </Typography>
@@ -31,7 +32,7 @@ function ItemDetail({item}) {
           <Typography variant="caption" component="h3" paragraph="true" align= "left">
             Precio: $ {price}
           </Typography>
-         </p>
+        </p>
         </CardContent>
         </CardActionArea>
        
