@@ -5,8 +5,9 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 
-function ItemDetail({pictureUrl,price,title,description}) {
-    console.log(pictureUrl,price,title);
+function ItemDetail({item}) {
+   const {title,pictureUrl,description,price} = item;
+    
     return (
         <div>
             <div className="Item">
@@ -20,15 +21,17 @@ function ItemDetail({pictureUrl,price,title,description}) {
                 title="Contemplative Reptile"
             />
         <CardContent>
-          <Typography color="textSecondary" gutterBottom>
+         <p>
+         <Typography color="textSecondary" gutterBottom>
            {title}
           </Typography>
-          <Typography variant="body2" component="p">
-            {description }
+          <Typography variant="body" component="p">
+            Description: {description }
           </Typography>
-          <Typography variant="body2" component="p">
-            {price }
+          <Typography variant="body" component="p">
+            Price:{price }
           </Typography>
+         </p>
         </CardContent>
         </CardActionArea>
        

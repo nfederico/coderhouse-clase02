@@ -5,7 +5,7 @@ import './Styles.css';
 
 const ItemDetailContainer = () => {
     
-    const [item, setItem ] = useState([]);
+    const [item, setItem ] = useState({});
     const getItem = new Promise((req, res) => {
     setTimeout(() => {
       req(itemsMocked[0]);
@@ -13,11 +13,11 @@ const ItemDetailContainer = () => {
   });
     
    useEffect(() => {
-    getItem.then((item) => {
-      setItem(item)});
+       getItem.then((item) =>
+    setItem(item));
   }, []);
 
- 
+  console.log(item);
 
     return(
         <div className="container">
