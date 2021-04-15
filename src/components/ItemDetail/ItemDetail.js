@@ -15,21 +15,21 @@ function ItemDetail({item}) {
         <CardActionArea>
             <CardMedia
                 component="img"
-                alt="Contemplative Reptile"
+                alt={title}
                 height="140"
                 image= {pictureUrl}
-                title="Contemplative Reptile"
+                title={title}
             />
         <CardContent>
          <p>
-         <Typography color="textSecondary" gutterBottom>
+         <Typography color="primary" gutterBottom align= "center">
            {title}
           </Typography>
-          <Typography variant="body" component="p">
-            Description: {description }
+          <Typography variant="caption" component="h2" paragraph="true" align= "left">
+            Descripción: {description}
           </Typography>
-          <Typography variant="body" component="p">
-            Price:{price }
+          <Typography variant="caption" component="h3" paragraph="true" align= "left">
+            Precio: $ {price}
           </Typography>
          </p>
         </CardContent>
