@@ -4,7 +4,8 @@ const itemsMocked = [
         title:"cuaderno",
         price: 10,
         pictureUrl: "https://picsum.photos/200",
-        description: "a great product"
+        description: "a great product",
+        category:"libreria",
 
     },
     {
@@ -12,7 +13,8 @@ const itemsMocked = [
         title:"cuaderno 2",
         price: 20,
         pictureUrl: "https://picsum.photos/100",
-        description: "another great product"
+        description: "another great product",
+        category:"libreria",
     },
 
 ]

@@ -4,20 +4,23 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 
 import NavBar from  './components/Navbar/NavBar';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 function App() {
   
   return (
-    <div className="mainApp">     
-                
-          <NavBar/>
-          
-        
-         <ItemDetailContainer />
-          
-
-    </div>
-
+    <Router>
+      <div className="mainApp"> 
+        <NavBar/>           
+          <Switch>            
+            <Route path="/" exact component={ItemListContainer} />
+            <Route path="/category/:id" exact component={ItemListContainer} />
+            <Route path="/item/:id" exact component={ItemDetailContainer} />          
+          </Switch> 
+       
+      </div>
+    </Router>
  
   
 

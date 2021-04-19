@@ -1,5 +1,6 @@
 import companyLogo from '../../resources/logoAmericana.png';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 const NavBar = () => 
@@ -15,16 +16,19 @@ return (
                 height="75"
                 className="logo"
             />
-            <a className="font-logo"href="#">AMERICANA</a>
+            <Link to="/">AMERICANA </Link>
         <ul>        
                      
-        <li><a href="#">Inicio</a></li>              
-        <li><a href="#">Productos</a></li>            
-        <li><a href="#"><CartWidget/> </a></li>   
+        <Link to="/">
+            <li>Inicio</li>
+        </Link> 
+        <Link to="">
+            <li><CartWidget/></li>   
+        </Link>             
                                 
         </ul>
         
-     </nav>
+    </nav>
 )
 }
 

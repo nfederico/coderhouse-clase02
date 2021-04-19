@@ -3,12 +3,12 @@ import itemsMocked from '../../data/data';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './Styles.css';
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({id}) => {
     
     const [item, setItem ] = useState({});
     const getItem = new Promise((req, res) => {
     setTimeout(() => {
-      req(itemsMocked[0]);
+      req(itemsMocked.find((element) => element.id === id ));
     }, 2000);
   });
     

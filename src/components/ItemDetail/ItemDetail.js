@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import './ItemDetail.css';
 
-function ItemDetail({item}) {
+function ItemDetail(item) {
    const {title,pictureUrl,description,price} = item;
     
     return (
@@ -26,8 +26,8 @@ function ItemDetail({item}) {
          <Typography color="primary" gutterBottom align= "center">
            {title}
           </Typography>
-          <Typography variant="caption" component="h2" paragraph="true" align= "left">
-            Descripción: {description}
+          <Typography variant="caption" component="h3" paragraph="true" align= "left">
+            Descripción: {description} 
           </Typography>
           <Typography variant="caption" component="h3" paragraph="true" align= "left">
             Precio: $ {price}

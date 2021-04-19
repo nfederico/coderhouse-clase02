@@ -1,47 +1,6 @@
 .mainApp {
   text-align: center;
 }
-nav img { 
-  margin-right: 10px;
-}
-
-h1 {
-  text-align: center;
-  font-size: 70px;
-  color:rgb(17, 2, 2);
-}
-
-nav ul {
-  display: flex;
-}
-
-nav a{
-  text-decoration:none;
-  color:inherit;
-  font-size:20px;
-  }
-
-nav li:first-child{
-  text-align:left;
-}
-
-nav li{
-  align-content: center;
-  list-style-type: none;
-  width: 100vw;
-  height:30px;
-  padding:5px 10px;
-  background-color:#000;
-  border:1px solid #000;
-  text-align:center;
-  color:#fff;
-  position:relative;
-}
-
-nav li:hover{
-  background-color:#fff;
-  color:#000;
-  }
 
 
 

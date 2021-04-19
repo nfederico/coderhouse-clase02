@@ -1,4 +1,5 @@
-.greeting-container {
+.container {
+    text-align: center;
     color: #294d44;
     font-weight: bolder;
     font-family: 'Ubuntu', sans-serif;

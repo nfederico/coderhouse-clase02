@@ -1,11 +1,11 @@
-import './Styles.css';
+import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
 
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({id}) => {
     return(
-        <div className="greeting-container">
-        <p>{greeting}</p>
+        <div className="container">
+        <p>ListContainer{id}</p>
         <ItemList/>
 
         </div>
