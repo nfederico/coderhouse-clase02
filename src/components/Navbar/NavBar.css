@@ -23,9 +23,9 @@
     font-size:20px;
     }
   
-  nav li:first-child{
+  nav li:last-child{
     text-align:left;
-    width: 70vw;
+    
   }
   
   nav li{

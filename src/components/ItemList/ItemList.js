@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react';
+import {Link} from 'react-router-dom';
 import Item from '../Item/Item';
 import itemsMocked from '../../data/data';
 import './Styles.css';
@@ -8,8 +9,9 @@ const ItemList = ({category}) =>{
     const [data, setData] = useState([]);
       
     useEffect(() => {
-      
-        setData(itemsMocked.filter((element) => element.category == category ));
+             category ? setData(itemsMocked.filter((element) => element.category == category )) : 
+             setData(itemsMocked)          ;
+        
       }, []);
     
 
@@ -19,9 +21,12 @@ const ItemList = ({category}) =>{
             <ul className="ul-columnas">
             {
             data.map((item)=>(
-                    <li key= {item.id}> 
-                        <Item title = {item.title} price = {item.price} pictureUrl={item.pictureUrl}/> 
-                    </li>))
+                    <Link to={`item/${item.id}`}>
+                        <li key= {item.id}> 
+                            <Item title = {item.title} price = {item.price} pictureUrl={item.pictureUrl}/> 
+                        </li>
+                    </Link>
+                   ))
             } 
         </ul>
         </div>

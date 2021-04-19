@@ -22,6 +22,12 @@ return (
         <Link to="/">
             <li>Inicio</li>
         </Link> 
+        <Link to="category/libreria">
+            <li>Cuadernos</li>
+        </Link> 
+        <Link to="category/otros">
+            <li>Otros</li>
+        </Link> 
         <Link to="">
             <li><CartWidget/></li>   
         </Link>             
