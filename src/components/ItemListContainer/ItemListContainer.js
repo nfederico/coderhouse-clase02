@@ -4,11 +4,11 @@ import ItemList from '../ItemList/ItemList';
 
 
 const ItemListContainer = () => {
-    const {category} = useParams();
+    const {id} = useParams();
+    console.log(id);
     return(
         <div className="container">
-        <p>ListContainer</p>
-        <ItemList category={category}/>
+          <ItemList category={id}/>
 
         </div>
         

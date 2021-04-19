@@ -9,7 +9,7 @@ import './ItemDetail.css';
 function ItemDetail({item}) {
  
    const {id,title,pictureUrl,description,price} = item;
-    console.log(title);
+    
     return (
         <div>
             <div className="container">

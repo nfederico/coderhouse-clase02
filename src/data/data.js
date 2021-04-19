@@ -5,7 +5,7 @@ const itemsMocked = [
         price: 10,
         pictureUrl: "https://picsum.photos/200",
         description: "a great product",
-        category:"libreria",
+        category:"otro",
 
     },
     {

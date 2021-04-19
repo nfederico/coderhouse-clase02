@@ -6,8 +6,7 @@ import './Styles.css';
 
 const ItemList = ({category}) =>{
     const [data, setData] = useState([]);
-    setTimeout(() => {setData(itemsMocked)},2000); 
-    
+      
     useEffect(() => {
       
         setData(itemsMocked.filter((element) => element.category == category ));
