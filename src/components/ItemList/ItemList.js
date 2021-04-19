@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Item from '../Item/Item';
 import itemsMocked from '../../data/data';
 import './Styles.css';
 
 
-const ItemList = () =>{
+const ItemList = ({category}) =>{
     const [data, setData] = useState([]);
     setTimeout(() => {setData(itemsMocked)},2000); 
     
+    useEffect(() => {
+      
+        setData(itemsMocked.filter((element) => element.category == category ));
+      }, []);
+    
+
     return (
 
         <div className="itemlist-container">

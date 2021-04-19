@@ -6,9 +6,10 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import './ItemDetail.css';
 
-function ItemDetail(item) {
-   const {title,pictureUrl,description,price} = item;
-    
+function ItemDetail({item}) {
+ 
+   const {id,title,pictureUrl,description,price} = item;
+    console.log(title);
     return (
         <div>
             <div className="container">
