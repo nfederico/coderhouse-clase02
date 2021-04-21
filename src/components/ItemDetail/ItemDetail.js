@@ -17,15 +17,11 @@ function ItemDetail({item}) {
  
    const {title,pictureUrl,description,price} = item;
    const [count, setCount] = useState(0)
-   const [compra, setCompra] = useState(true)
-
-   let isAlgo = true
    
-   const handleQty = (qty) => {
-     setCompra(false)
-     setCount(qty)
-     console.log(' el count del detail es:')
-     console.log(qty)};
+   
+   const handleQty = (qty) => {     
+     setCount(qty)}
+    
       
      
     return (
@@ -57,9 +53,10 @@ function ItemDetail({item}) {
        
         </CardActionArea>
         <CardActionArea>
-            
-            {compra && <ItemCount stock={5} initial={0} addQuantity ={handleQty}/> }
-            {count>0 && <Link to="/cart"><Button variant="outlined" size="small" color="primary" >  Terminar compra   </Button></Link> }
+           
+          {count>0 ? 
+          <Link to="/cart" style={{ textDecoration: 'none'}}><Button variant="outlined" size="small" color="primary" >  Terminar compra   </Button></Link> : 
+          <ItemCount stock={5} initial={0} addQuantity ={handleQty}/>}
            
         </CardActionArea>
         

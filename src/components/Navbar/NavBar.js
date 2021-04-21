@@ -19,16 +19,16 @@ return (
             <Link to="/">AMERICANA </Link>
         <ul>        
                      
-        <Link exact to="/">
+        <Link exact to="/" style={{ textDecoration: 'none'}}>
             <li>Inicio</li>
         </Link> 
-        <Link exact to="category/libreria">
+        <Link exact to="category/libreria"style={{ textDecoration: 'none'}}>
             <li>Cuadernos</li>
         </Link> 
-        <Link exact to="category/otros">
+        <Link exact to="category/otros" style={{ textDecoration: 'none'}}>
             <li>Otros</li>
         </Link> 
-        <Link exact to="cart">
+        <Link exact to="cart" style={{ textDecoration: 'none'}}>
             <li><CartWidget/></li>   
         </Link>             
                                 

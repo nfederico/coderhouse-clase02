@@ -4,7 +4,9 @@ import Button from '@material-ui/core/Button';
 
 const ItemCount = ({stock,initial, addQuantity})=>
 {   const [count, setCount] = useState(initial);
-    
+    const handleAddQty = () =>{
+        addQuantity(count)
+    }
     return (
         <div className="counter-container">
             <p>Cantidad: {count}</p>
@@ -14,7 +16,7 @@ const ItemCount = ({stock,initial, addQuantity})=>
             <Button variant="contained" size="small" color="secondary" onClick={() => {count > 0 ? setCount(count - 1) :setCount(0) }}>
                 -
             </Button>   
-            {count>0 && <Button variant="outlined" size="small" color="primary" onClick= {addQuantity(count)}  >
+            {count>0 && <Button variant="outlined" size="small" color="primary" onClick= {handleAddQty}  >
             Comprar
            </Button> }  
         </div>

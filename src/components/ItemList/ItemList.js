@@ -21,7 +21,7 @@ const ItemList = ({category}) =>{
             <ul className="ul-columnas">
             {
             data.map((item)=>(
-                    <Link to={`item/${item.id}`}>
+                    <Link to={`item/${item.id}`} style={{ textDecoration: 'none'}}>
                         <li key= {item.id}> 
                             <Item title = {item.title} price = {item.price} pictureUrl={item.pictureUrl}/> 
                         </li>
