@@ -12,7 +12,7 @@ const ItemList = ({category}) =>{
              category ? setData(itemsMocked.filter((element) => element.category == category )) : 
              setData(itemsMocked)          ;
         
-      }, []);
+      }, [category]);
     
 
     return (

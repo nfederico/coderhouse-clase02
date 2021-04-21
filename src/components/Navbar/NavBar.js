@@ -19,16 +19,16 @@ return (
             <Link to="/">AMERICANA </Link>
         <ul>        
                      
-        <Link to="/">
+        <Link exact to="/">
             <li>Inicio</li>
         </Link> 
-        <Link to="category/libreria">
+        <Link exact to="category/libreria">
             <li>Cuadernos</li>
         </Link> 
-        <Link to="category/otros">
+        <Link exact to="category/otros">
             <li>Otros</li>
         </Link> 
-        <Link to="">
+        <Link exact to="cart">
             <li><CartWidget/></li>   
         </Link>             
                                 

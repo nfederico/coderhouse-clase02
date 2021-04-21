@@ -32,7 +32,7 @@ const Item = ({title,price,pictureUrl}) => {
         </CardContent>
         </CardActionArea>
         <CardActions>        
-             <ItemCount stock={5} initial={1}/>
+            
         </CardActions>
         </Card>
         </div>
