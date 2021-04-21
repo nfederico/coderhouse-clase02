@@ -22,13 +22,13 @@ return (
         <Link exact to="/" style={{ textDecoration: 'none'}}>
             <li>Inicio</li>
         </Link> 
-        <Link exact to="category/libreria"style={{ textDecoration: 'none'}}>
+        <Link exact to="/category/libreria"style={{ textDecoration: 'none'}}>
             <li>Cuadernos</li>
         </Link> 
-        <Link exact to="category/otros" style={{ textDecoration: 'none'}}>
+        <Link exact to="/category/otros" style={{ textDecoration: 'none'}}>
             <li>Otros</li>
         </Link> 
-        <Link exact to="cart" style={{ textDecoration: 'none'}}>
+        <Link exact to="/cart" style={{ textDecoration: 'none'}}>
             <li><CartWidget/></li>   
         </Link>             
                                 
