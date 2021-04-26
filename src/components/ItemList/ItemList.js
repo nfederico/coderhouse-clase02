@@ -2,14 +2,14 @@ import React, { useState,useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import Item from '../Item/Item';
 import itemsMocked from '../../data/data';
-import './Styles.css';
+import './ItemList.css';
 
 
 const ItemList = ({category}) =>{
     const [data, setData] = useState([]);
       
     useEffect(() => {
-             category ? setData(itemsMocked.filter((element) => element.category == category )) : 
+             category ? setData(itemsMocked.filter((element) => element.category === category )) : 
              setData(itemsMocked)          ;
         
       }, [category]);
@@ -17,8 +17,9 @@ const ItemList = ({category}) =>{
 
     return (
 
-        <div className="itemlist-container">
-            <ul className="ul-columnas">
+        <div >
+            
+            <ul className="container" >
             {
             data.map((item)=>(
                     <Link to={`/item/${item.id}`} style={{ textDecoration: 'none'}}>
@@ -29,6 +30,7 @@ const ItemList = ({category}) =>{
                    ))
             } 
         </ul>
+       
         </div>
        
     )

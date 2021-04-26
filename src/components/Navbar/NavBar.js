@@ -6,35 +6,42 @@ import './NavBar.css';
 const NavBar = () => 
 {
 return (
+    <div className="navbar-container">
+        <Link to="/">
+            <img
+                    alt="Americana Logo"
+                    src= {companyLogo}
+                    className="logo"
+                />
+        </Link>
+
+        <input type= "checkbox" id="nav-toggle" className="nav-toggle"/> 
+
+        <nav>
+                
+            <ul>       
+                        
+                <Link  to="/" style={{ textDecoration: 'none'}}>
+                    <li>Inicio</li>
+                </Link> 
+                <Link to="/category/libreria"style={{ textDecoration: 'none'}}>
+                    <li>Cuadernos</li>
+                </Link> 
+                <Link to="/category/otros" style={{ textDecoration: 'none'}}>
+                    <li>Otros</li>
+                </Link> 
+                <Link to="/cart" style={{ textDecoration: 'none'}}>
+                    <li><CartWidget/></li>   
+                </Link>             
+                                    
+            </ul>
+        </nav>
+        <label for="nav-toggle" className="nav-toggle-label">
+        <span>|||</span>
+        </label>
     
-    <nav>
-        
-        <img
-                alt=""
-                src= {companyLogo}
-                width="30"
-                height="75"
-                className="logo"
-            />
-            <Link to="/">AMERICANA </Link>
-        <ul>        
-                     
-        <Link exact to="/" style={{ textDecoration: 'none'}}>
-            <li>Inicio</li>
-        </Link> 
-        <Link exact to="/category/libreria"style={{ textDecoration: 'none'}}>
-            <li>Cuadernos</li>
-        </Link> 
-        <Link exact to="/category/otros" style={{ textDecoration: 'none'}}>
-            <li>Otros</li>
-        </Link> 
-        <Link exact to="/cart" style={{ textDecoration: 'none'}}>
-            <li><CartWidget/></li>   
-        </Link>             
-                                
-        </ul>
-        
-    </nav>
+    </div>
+    
 )
 }
 

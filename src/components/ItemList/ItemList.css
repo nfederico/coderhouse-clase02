@@ -1,0 +1,13 @@
+.container {
+  display:flex;   
+  flex-wrap: wrap;
+ 
+
+}
+
+li{
+  list-style: none;
+  flex: 0 0 33.333333%;
+  
+}
+

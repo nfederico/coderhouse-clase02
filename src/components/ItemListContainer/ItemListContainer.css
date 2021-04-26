@@ -1,8 +1,7 @@
 .container {
-    text-align: center;
-    color: #294d44;
-    font-weight: bolder;
-    font-family: 'Ubuntu', sans-serif;
- 
+  display: flex;
+  align-items: center;
+  background: #294d44;  
+  height: 100vh; 
   }
 

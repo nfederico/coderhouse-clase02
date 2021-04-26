@@ -3,46 +3,151 @@
     src: local('Market_Deco'), url(../../resources/fonts/Market_Deco.ttf) format('truetype');
   }
 
-  nav img { 
-    margin-right: 10px;
-  }
+.navbar-container{
+  background: lightsteelblue;
+  text-align: center;
+  position: fixed;
+  z-index: 999; /* para que quede arriba de todo por el position fixed*/
+  width: 100%;
+}
+.logo {
+  width: 120px;
+  height:70px;
+}
+
+.nav-toggle{
+  display:none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left:0;
+  margin-left: 1em;
+  height: 100%;
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color:#458b74;
   
-  h1 {
-    text-align: center;
-    font-size: 70px;
-    color:rgb(17, 2, 2);
+}
+
+nav{
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left:0;
+  background: lightyellow;
+  width: 100%;
+  transform: scale(1,0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+
+}
+
+nav ul {
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+nav a {
+  color:#458b74;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 160ms ease-in-out; /*este lo usa al contraer el menu hamurguesa*/
+}
+
+nav a:hover{
+  color: black;
+}
+
+
+.nav-toggle:checked ~ nav{
+ transform: scale(1,1);
+
+}
+
+.nav-toggle:checked ~ nav a{
+  opacity: 1; /* para que cuando haces el transition del ease -in-out se haga un fade de las letras y no quede feo*/
+  transition: opacity 220ms ease-in-out 220ms;
+  
+ }
+
+
+/* para cambiar el comportamiento en pantallas pequeñas del nav*/
+
+ @media screen and (min-width: 800px) {
+
+  .nav-toggle-label {
+    display: none;
+  }
+  .navbar-container{
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+   
+    all:unset;
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
   
   nav ul {
     display: flex;
   }
   
-  nav a{
-    text-decoration:none;
-    color:inherit;
-    font-size:20px;
-    }
-  
-  nav li:last-child{
-    text-align:left;
-    
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
   }
   
-  nav li{
-    align-content: center;
-    list-style-type: none;
-    width: 30vw;
-    height:30px;
-    padding:5px 10px;
-    background-color:#000;
-    border:1px solid #000;
-    text-align:center;
-    color:#fff;
-    position:relative;
+  nav a {
+    opacity: 1;
+    position: relative;
   }
   
-  nav li:hover{
-    background-color:#fff;
-    color:#000;
-    }
+  nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: lightslategray;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
   
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+
+
+ }
+
