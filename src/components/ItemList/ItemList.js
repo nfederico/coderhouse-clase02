@@ -23,7 +23,7 @@ const ItemList = ({category}) =>{
             {
             data.map((item)=>(
                     <Link to={`/item/${item.id}`} style={{ textDecoration: 'none'}}>
-                        <li key= {item.id}> 
+                        <li key = {item.id}> 
                             <Item title = {item.title} price = {item.price} pictureUrl={item.pictureUrl}/> 
                         </li>
                     </Link>

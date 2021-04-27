@@ -4,7 +4,7 @@
   }
 
 .navbar-container{
-  background: lightsteelblue;
+  background: white;
   text-align: center;
   position: fixed;
   z-index: 999; /* para que quede arriba de todo por el position fixed*/
@@ -38,7 +38,7 @@ nav{
   text-align: left;
   top: 100%;
   left:0;
-  background: lightyellow;
+  background: white;
   width: 100%;
   transform: scale(1,0);
   transform-origin: top;
@@ -101,7 +101,7 @@ nav a:hover{
   nav {
    
     all:unset;
-    /* the following lines are not from my video, but add Edge support */
+   
     position: relative;
     text-align: left;
     transition: none;
@@ -109,7 +109,7 @@ nav a:hover{
     background: none;
     top: initial;
     left: initial;
-    /* end Edge support stuff */
+    
     
     grid-column: 3 / 4;
     display: flex;

@@ -1,9 +1,13 @@
 .container {
+    
     display: flex;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    justify-content: end;
+   /* grid-template-columns: 1fr 1fr 1fr 1fr ; */
     justify-content: space-around;
-    column-gap: 60px;
+    column-gap: 20px;
+  
+}
 
-   
+.algo
+{
+    display: flex;
 }
