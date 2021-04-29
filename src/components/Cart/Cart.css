@@ -1,0 +1,8 @@
+
+.cart-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgb(204, 204, 204);  
+    height: 100vh; 
+}
