@@ -1,6 +1,10 @@
 import React , {useContext,useState} from 'react';
-import './Cart.css';
+import { Link } from 'react-router-dom';
 import {CartContext} from '../../CartContext/CartContext';
+
+import './Cart.css';
+
+
 
 
 import List from '@material-ui/core/List';
@@ -14,6 +18,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import FolderIcon from '@material-ui/icons/Folder';
 import DeleteIcon from '@material-ui/icons/Delete';
+import Button from '@material-ui/core/Button';
 
 
 function Cart() {
@@ -60,7 +65,16 @@ function Cart() {
             : 
     (
         <div className="cart-container" >
-            <Typography variant="h4" >        No hay Items </Typography> 
+
+           
+           <Typography variant="h4" > No hay Items </Typography> 
+
+           <Link to="/" style={{ textDecoration: 'none'}}>     
+           <Button variant="outlined" size="small" color="primary" > Comezar a comprar </Button>
+           </Link>
+                 
+            
+           
           
         </div>
     )
