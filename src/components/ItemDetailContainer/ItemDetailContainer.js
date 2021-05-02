@@ -9,19 +9,22 @@ const ItemDetailContainer = () => {
     const {id} = useParams();
     const [item, setItem ] = useState({});
 
+    console.log(id)
+
     const getitemById = async () =>{
-        db.collection('items').where('id','==',id).onSnapshot((querySnapshot) =>{
-            const docs ={};
+        db.collection('items').onSnapshot((querySnapshot) =>{
+            const docs =[];
             querySnapshot.forEach((doc) => {
                 docs.push({...doc.data(), id:doc.id})
             });
-            setItem(docs);
+            const itemFiltered = docs.filter(element => element.id === id).shift()
+           
+            setItem(itemFiltered);
         });
 
     };
        
-   useEffect(() => {
-      
+   useEffect(() => {      
     getitemById();
   }, []);
 
