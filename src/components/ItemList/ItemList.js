@@ -1,16 +1,37 @@
 import React, { useState,useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import Item from '../Item/Item';
-import itemsMocked from '../../data/data';
+import {db} from '../../database/firebase';
+
 import './ItemList.css';
 
 
 const ItemList = ({category}) =>{
     const [data, setData] = useState([]);
+
+    const getItems = async () => {
+        db.collection('items').onSnapshot((querySnapshot) =>{
+            const docs =[];
+            querySnapshot.forEach((doc) => {
+                docs.push({...doc.data(), id:doc.id})
+            });
+            setData(docs);
+        });
+    };
+
+    const getItemsByCategory = async () =>{
+        db.collection('items').where('category','==',category).onSnapshot((querySnapshot) =>{
+            const docs =[];
+            querySnapshot.forEach((doc) => {
+                docs.push({...doc.data(), id:doc.id})
+            });
+            setData(docs);
+        });
+
+    };
       
     useEffect(() => {
-             category ? setData(itemsMocked.filter((element) => element.category === category )) : 
-             setData(itemsMocked)          ;
+             category ? getItemsByCategory() : getItems()          ;
         
       }, [category]);
     
