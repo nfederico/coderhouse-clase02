@@ -7,21 +7,21 @@ export const CartProvider = (props) => {
 
     const isInCart = (id) => {
     
-       const itemFound = cart.some((item) => item.item.id ===id)
+       const itemFound = cart.some((element) => element.item.id ===id)
        console.log(itemFound)
        return (itemFound)
       
      };
 
     const addItem =({item,qty}) => {
-        console.log(item.item.id)
-        !isInCart(item.item.id) && setCart([...cart,{item,qty}])
+        console.log(item.id)
+        !isInCart(item.id) && setCart([...cart,{item,qty}])
         
     };
 
     const removeItem = (itemId)=> {
-      const newItems = cart.filter((item) => item.id !==itemId)
-      setCart(newItems)
+      const newItems = console.log('SOY EL ID RECIBIDO',itemId)
+      //setCart(newItems)
        
     };
 

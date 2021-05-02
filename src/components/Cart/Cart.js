@@ -1,4 +1,4 @@
-import React , {useContext,useState} from 'react';
+import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import {CartContext} from '../../CartContext/CartContext';
 import './Cart.css';
@@ -18,29 +18,33 @@ import Button from '@material-ui/core/Button';
 
 function Cart() {
     const {cart,removeItem,clear} = useContext(CartContext);
-    const [myCart, setMyCart] = useState(cart)
+    const cartStatus = cart.length
     
-    const cartStatus = myCart.length
+    const remove = (id) =>{
+        removeItem(id)
+        
+    }
    
     return (
         cartStatus > 0 ? 
             
             (
+                
              <div className="cart-container">
              <Grid item xs={16} md={6}>
             <Typography variant="h4" >
             Tu carrito
             </Typography> 
             <List>
-                {myCart.map((element) => (<ListItem key = {element.item.item.id}>
+                {cart.map((element) => (<ListItem key = {element.item.id}>
                 <ListItemAvatar>
-                    <Avatar src= {element.item.item.pictureUrl}/>
+                    <Avatar src= {element.item.pictureUrl}/>
                 </ListItemAvatar>    
                 <ListItemText 
-                    primary= {element.item.item.title} 
-                    secondary = {`Descripcion: ${element.item.item.description} Precio Unitario: ${element.item.item.price} Cantidad seleccionada: ${element.qty.qty}`} />
+                    primary= {element.item.title} 
+                    secondary = {`Descripcion: ${element.item.description} Precio Unitario: ${element.item.price} Cantidad seleccionada: ${element.qty}`} />
                 <ListItemSecondaryAction>
-                    <IconButton edge="end" aria-label="delete" onClick = {removeItem}>
+                    <IconButton edge="end" aria-label="delete" onClick = {remove}>
                         <DeleteIcon />
                     </IconButton>
                 </ListItemSecondaryAction>    
@@ -65,18 +69,10 @@ function Cart() {
            <Link to="/" style={{ textDecoration: 'none'}}>     
            <Button variant="outlined" size="small" color="primary" > Comezar a comprar </Button>
            </Link>
-                 
-            
-           
           
         </div>
     )
-
-
-
-
-
-        
+       
     )
 }
 

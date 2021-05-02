@@ -20,7 +20,9 @@ function ItemDetail({item}) {
    
    const handleQty = (qty) => {     
      setCount(qty)
-     addItem({item:{item},qty:{qty}})
+     addItem({item,qty:qty})
+     console.log({item,qty:qty});
+     
      console.log(cart)
     }
     
