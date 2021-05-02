@@ -21,7 +21,7 @@ function Cart() {
     const [myCart, setMyCart] = useState(cart)
     
     const cartStatus = myCart.length
-    console.log(myCart.length)
+   
     return (
         cartStatus > 0 ? 
             
