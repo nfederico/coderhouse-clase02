@@ -36,7 +36,8 @@ function ItemDetail({item}) {
             <CardMedia
                 component="img"
                 alt={title}
-                height="140"
+                height="300"
+                width="300"
                 image= {pictureUrl}
                 title={title}
             />

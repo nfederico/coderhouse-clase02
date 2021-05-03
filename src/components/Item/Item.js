@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import './Item.css';
 
 
-const Item = ({title,price,pictureUrl}) => {
+const Item = ({title,price,pictureUrl,description}) => {
     
       return (
         <div className="Item">
@@ -17,17 +17,18 @@ const Item = ({title,price,pictureUrl}) => {
         <CardActionArea>
             <CardMedia
                 component="img"
-                alt="Contemplative Reptile"
-                height="140"
+                alt={description}
+                height="200"
+                width="200"
                 image= {pictureUrl}
-                title="Contemplative Reptile"
+                title={title}
             />
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
            {title}
           </Typography>
           <Typography variant="body2" component="p">
-            {price }
+            {`Precio: $ ${price }`}
           </Typography>
         </CardContent>
         </CardActionArea>

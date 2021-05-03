@@ -42,6 +42,7 @@ const ItemList = ({category}) =>{
             
             <ul className="container" >
             {
+            
             data.map((item)=>(
                     <Link to={`/item/${item.id}`} style={{ textDecoration: 'none'}}>
                         <li key = {item.id}> 

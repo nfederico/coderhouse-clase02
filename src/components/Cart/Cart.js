@@ -14,6 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
+import ItemList from '../ItemList/ItemList';
 
 
 function Cart() {
@@ -31,31 +32,39 @@ function Cart() {
             (
                 
              <div className="cart-container">
-             <Grid item xs={16} md={6}>
-            <Typography variant="h4" >
-            Tu carrito
-            </Typography> 
-            <List>
-                {cart.map((element) => (<ListItem key = {element.item.id}>
-                <ListItemAvatar>
-                    <Avatar src= {element.item.pictureUrl}/>
-                </ListItemAvatar>    
-                <ListItemText 
-                    primary= {element.item.title} 
-                    secondary = {`Descripcion: ${element.item.description} Precio Unitario: ${element.item.price} Cantidad seleccionada: ${element.qty}`} />
-                <ListItemSecondaryAction>
-                    <IconButton edge="end" aria-label="delete" onClick = {remove}>
-                        <DeleteIcon />
-                    </IconButton>
-                </ListItemSecondaryAction>    
+                 <Grid item xs={16} md={6}>
+                    <Typography variant="h4" >
+                         Tu carrito
+                    </Typography> 
+                    <List>
+                     {cart.map((element) => (<ListItem key = {element.item.id}>
+                        <ListItemAvatar>
+                            <Avatar src= {element.item.pictureUrl}/>
+                        </ListItemAvatar>    
+                        <ListItemText 
+                            primary= {element.item.title} 
+                            secondary = {`Descripcion: ${element.item.description} Precio Unitario: ${element.item.price} Cantidad seleccionada: ${element.qty}`} />
+                        <ListItemSecondaryAction>
+                            <IconButton edge="end" aria-label="delete" onClick = {remove}>
+                                <DeleteIcon />
+                            </IconButton>
+                        </ListItemSecondaryAction>    
 
-                </ListItem>))}
+                         </ListItem>))}
 
-            </List>
+                         <ListItem key ="adasdsa">
+                        <ListItemText primary={`Total: $ ${cart.reduce((accum,element) =>(accum +(element.item.price * element.qty)),0)}`}/>
+             
+                        </ListItem>
+
+                    </List>
+                   
+                        
                     
-        </Grid>
+                    
+                </Grid>
 
-    </div> 
+            </div> 
             )
             
             
