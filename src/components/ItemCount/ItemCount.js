@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
-import AddCircleIcon from '@material-ui/icons/AddCircle';
+
 
 
 const ItemCount = ({stock,initial, addQuantity})=>
@@ -22,7 +22,7 @@ const ItemCount = ({stock,initial, addQuantity})=>
                 -
             </Button>   
             {count>0 && <Button variant="outlined" size="small" color="primary" onClick= {handleAddQty}  >
-            Comprar
+            Agregar al carrito
            </Button> }  
         </div>
     )

@@ -14,7 +14,7 @@ import './ItemDetail.css';
 
 function ItemDetail({item}) {
  
-   const {title,pictureUrl,description,price} = item;
+   const {title,pictureUrl,description,price,stock} = item;
    const [count, setCount] = useState(0)
    const {addItem,cart} = useContext(CartContext);
    
@@ -62,7 +62,7 @@ function ItemDetail({item}) {
            
            {count>0 ? 
            <Link to="/cart" style={{ textDecoration: 'none'}}><Button variant="outlined" size="small" color="primary" >  Terminar compra   </Button></Link> : 
-           <ItemCount stock={5} initial={0} addQuantity ={handleQty}/>}
+           <ItemCount stock={stock} initial={0} addQuantity ={handleQty}/>}
             
          </CardActionArea>
        </div>

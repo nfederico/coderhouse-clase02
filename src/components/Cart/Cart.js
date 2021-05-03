@@ -14,7 +14,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
-import ItemList from '../ItemList/ItemList';
+
 
 
 function Cart() {
@@ -22,6 +22,8 @@ function Cart() {
     const cartStatus = cart.length
     
     const remove = (id) =>{
+       console.log(id)
+        // const id= "agjBLeDkcEs56qnSqawa"
         removeItem(id)
         
     }

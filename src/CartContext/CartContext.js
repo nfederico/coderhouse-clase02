@@ -1,3 +1,4 @@
+
 import React, { useState, createContext } from 'react';
 
 export const CartContext = createContext();
@@ -20,8 +21,9 @@ export const CartProvider = (props) => {
     };
 
     const removeItem = (itemId)=> {
-      const newItems = console.log('SOY EL ID RECIBIDO',itemId)
-      //setCart(newItems)
+      const newItems = cart.filter((element) => element.item.id != itemId) 
+      console.log('SOY EL ID RECIBIDO',itemId)
+      setCart(newItems)
        
     };
 
