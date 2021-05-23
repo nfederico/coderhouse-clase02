@@ -47,7 +47,7 @@ function Cart() {
                             primary= {element.item.title} 
                             secondary = {`Descripcion: ${element.item.description} Precio Unitario: ${element.item.price} Cantidad seleccionada: ${element.qty}`} />
                         <ListItemSecondaryAction>
-                            <IconButton edge="end" aria-label="delete" onClick = {remove}>
+                            <IconButton edge="end" aria-label="delete" onClick = {()=>removeItem(element.item.id)}>
                                 <DeleteIcon />
                             </IconButton>
                         </ListItemSecondaryAction>    
