@@ -10,11 +10,16 @@ export const CartProvider = (props) => {
     phone:"+549115275564",
     email:"ricardo.lorente@aol.com"
     } 
-   const addOrder =  async (cartItems,price) => {
+  
+
+   const addOrder =  async (cartItems) => {
+    
+
       const newOrder = {
         buyer:userInfo,
         items:cartItems,
-        total: price
+        date: new Date(),
+        total: cart.reduce((accum,element) =>(accum +(element.item.price * element.qty)),0)
       }
       const {id} = await db.collection('orders').add(newOrder)
       console.log('Nueva orden ingresada' ,id)  

@@ -22,7 +22,7 @@ function Cart() {
     
     const {cart,removeItem,addOrder} = useContext(CartContext);
     const cartStatus = cart.length
-     
+    
    
     return (
         cartStatus > 0 ? 
@@ -57,7 +57,7 @@ function Cart() {
 
                         <ListItem key ="buy">
                             <Link to="/" style={{ textDecoration: 'none'}}>     
-                                <Button variant="outlined" size="small" color="primary"onClick = {()=>addOrder(cart,10)} > Confirmar orden </Button>
+                                <Button variant="outlined" size="small" color="primary"onClick = {()=>addOrder(cart)} > Confirmar orden </Button>
                             </Link>
              
                         </ListItem>
