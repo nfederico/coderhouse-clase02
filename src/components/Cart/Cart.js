@@ -18,15 +18,11 @@ import Button from '@material-ui/core/Button';
 
 
 function Cart() {
-    const {cart,removeItem,clear} = useContext(CartContext);
-    const cartStatus = cart.length
     
-    const remove = (id) =>{
-       console.log(id)
-        // const id= "agjBLeDkcEs56qnSqawa"
-        removeItem(id)
-        
-    }
+    
+    const {cart,removeItem,addOrder} = useContext(CartContext);
+    const cartStatus = cart.length
+     
    
     return (
         cartStatus > 0 ? 
@@ -54,8 +50,15 @@ function Cart() {
 
                          </ListItem>))}
 
-                         <ListItem key ="adasdsa">
+                         <ListItem key ="total">
                         <ListItemText primary={`Total: $ ${cart.reduce((accum,element) =>(accum +(element.item.price * element.qty)),0)}`}/>
+             
+                        </ListItem>
+
+                        <ListItem key ="buy">
+                            <Link to="/" style={{ textDecoration: 'none'}}>     
+                                <Button variant="outlined" size="small" color="primary"onClick = {()=>addOrder(cart,10)} > Confirmar orden </Button>
+                            </Link>
              
                         </ListItem>
 
@@ -75,12 +78,12 @@ function Cart() {
         <div className="cart-container" >
 
            
-           <Typography variant="h4" > No hay Items </Typography> 
+           <Typography variant="h2" > No hay Items </Typography> 
 
            <Link to="/" style={{ textDecoration: 'none'}}>     
            <Button variant="outlined" size="small" color="primary" > Comezar a comprar </Button>
            </Link>
-          
+           
         </div>
     )
        
