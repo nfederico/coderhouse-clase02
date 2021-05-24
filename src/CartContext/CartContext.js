@@ -2,6 +2,7 @@
 import React, { useState, createContext } from 'react';
 import {db} from '../database/firebase';
 
+
 export const CartContext = createContext();
 
 export const CartProvider = (props) => {
@@ -22,9 +23,10 @@ export const CartProvider = (props) => {
         total: cart.reduce((accum,element) =>(accum +(element.item.price * element.qty)),0)
       }
       const {id} = await db.collection('orders').add(newOrder)
-      console.log('Nueva orden ingresada' ,id)  
-      clear()        
-
+      console.log('Nueva orden ingresada' ,id) 
+      clear() 
+          
+     
 
    }
    

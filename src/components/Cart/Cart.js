@@ -30,7 +30,7 @@ function Cart() {
             (
                 
              <div className="cart-container">
-                 <Grid item xs={16} md={6}>
+                 <Grid item xs={16} md={6} >
                     <Typography variant="h4" >
                          Tu carrito
                     </Typography> 
@@ -56,9 +56,9 @@ function Cart() {
                         </ListItem>
 
                         <ListItem key ="buy">
-                            <Link to="/" style={{ textDecoration: 'none'}}>     
+                            
                                 <Button variant="outlined" size="small" color="primary"onClick = {()=>addOrder(cart)} > Confirmar orden </Button>
-                            </Link>
+                            
              
                         </ListItem>
 
