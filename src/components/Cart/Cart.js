@@ -58,8 +58,7 @@ function Cart() {
                         <ListItem key ="buy">
                             
                                 <Button variant="outlined" size="small" color="primary"onClick = {()=>addOrder(cart)} > Confirmar orden </Button>
-                            
-             
+                                     
                         </ListItem>
 
                     </List>
