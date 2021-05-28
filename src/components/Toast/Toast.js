@@ -1,29 +1,20 @@
-import React from 'react';
+import React, {useState,useContext} from 'react';
 import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
+import Alert from '@material-ui/lab/Alert';
+import {NotificationContext} from '../../NotificationContext/NotificationContext';
 
 
-function Toast(message) {
-    function Alert(props) {
-        return <MuiAlert elevation={6} variant="filled" {...props} />;
-      }
+const Toast = (message) =>{
+  const {notifications} = useContext(NotificationContext)
+ 
+       return(
+        <Alert severity="success">
+          {notifications[0].message}
+        </Alert>
 
+       )
 
-
- return (
-    <div className="t">
-    
-     <Snackbar
-        anchorOrigin={'bottom', 'left' }
-        
-        message="I love snacks"
-        key={'bottom', 'left' }
-      />
-     
-   
-    
-  </div>
- )
+      
 
 }
 

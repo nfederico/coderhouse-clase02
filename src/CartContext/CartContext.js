@@ -1,6 +1,6 @@
-
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext,useContext } from 'react';
 import {db} from '../database/firebase';
+import { NotificationContext } from '../NotificationContext/NotificationContext';
 
 
 export const CartContext = createContext();
@@ -11,7 +11,7 @@ export const CartProvider = (props) => {
     phone:"+549115275564",
     email:"ricardo.lorente@aol.com"
     } 
-  
+   const {addNotification} = useContext(NotificationContext)
 
    const addOrder =  async (cartItems) => {
     
@@ -24,8 +24,10 @@ export const CartProvider = (props) => {
       }
       const {id} = await db.collection('orders').add(newOrder)
       console.log('Nueva orden ingresada' ,id) 
-      clear() 
-          
+      addNotification(id)
+      clear()
+      //Add notification
+                
      
 
    }

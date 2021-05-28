@@ -16,7 +16,6 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
 
 
-
 function Cart() {
     
     
@@ -56,18 +55,15 @@ function Cart() {
                         </ListItem>
 
                         <ListItem key ="buy">
-                            
+                            <Link to="/order" style={{ textDecoration: 'none'}}>
                                 <Button variant="outlined" size="small" color="primary"onClick = {()=>addOrder(cart)} > Confirmar orden </Button>
-                                     
+                            </Link>         
                         </ListItem>
 
-                    </List>
-                   
-                        
-                    
+                    </List>                            
                     
                 </Grid>
-
+                    
             </div> 
             )
             

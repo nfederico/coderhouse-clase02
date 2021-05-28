@@ -8,8 +8,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import ItemCount from '../../components/ItemCount/ItemCount';
-
-
 import './ItemDetail.css';
 
 function ItemDetail({item}) {
@@ -57,7 +55,7 @@ function ItemDetail({item}) {
         </CardContent>
        
         </CardActionArea>
-       <div className="algo">
+      
        <CardActionArea >
            
            {count>0 ? 
@@ -65,8 +63,7 @@ function ItemDetail({item}) {
            <ItemCount stock={stock} initial={0} addQuantity ={handleQty}/>}
             
          </CardActionArea>
-       </div>
-        
+      
             
         </Card>
          </div>
